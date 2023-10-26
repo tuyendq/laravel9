@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,5 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('home', ['name' => 'Tuyen']);
 });
+
+Route::get('/welcome', [WelcomeController::class, 'index']);
